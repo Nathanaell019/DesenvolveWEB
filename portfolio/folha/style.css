@@ -9,6 +9,10 @@
     --branco: #fff;
     --magenta: #ff004f;
     --cinza: #262626;
+    --bg-cinza-claro: #ababab;
+}
+html{
+    /* scroll-behavior: smooth; */
 }
 body{
     background-color: var(--cinza-escuro);
@@ -240,4 +244,109 @@ nav ul li a:hover::after{
 }
 .botao:hover{
     background-color: var(--magenta);
+}
+/******************CONTATO*****************/
+.contato_esquerda {
+    flex-basis: 35%;
+}
+.contato_direita {
+    flex-basis: 65%;
+}
+.contato_esquerda p {
+    margin-top: 30px;
+}
+.contato_esquerda p i {
+    font-size: 25px;
+    margin-right: 15px;
+    color: var(--magenta);
+}
+.social {
+    margin-top: 30px;
+}
+.social a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: var(--bg-cinza-claro);
+    display: inline-block;
+}
+.social a:hover {
+    color: var(--magenta);
+    transform:  translateY(-5px);
+    transition: 0.5s;
+}
+.contato_direita form {
+    width: 100%;
+}
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: var(--cinza);
+    padding: 15px;
+    margin: 15px 0;
+    color: var(--branco);
+    font-size: 18px;
+    border-radius: 6px;
+}
+form.botao2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.botao.botao2 {
+    display: inline-block;
+    background-color: var(--magenta);
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--cinza);
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i {
+    color: var(--magenta);
+}
+/******************Telas Pequenininhas*****************/
+nav .fa-solid {
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(../imagens/alanzoka3.png);
+    }
+    .texto-cabecalho {
+        margin-top: 20%;
+        font-size: 16px;
+    }
+    .texto-cabecalho h1 {
+        font-size: 30px;
+        }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background-color: var(--magenta);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 }
