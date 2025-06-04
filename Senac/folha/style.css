@@ -1,18 +1,26 @@
+html,
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
 }
 
 :root {
-    --Azul: #3a5fed;
+    --Azul: #3467e6;
+    --Laranja: #ff6600;
 }
 
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    flex-wrap: wrap;
+.navbar {
+    padding: 0.5rem 1rem;
+    border-top: none !important;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .navbar-brand img {
@@ -21,10 +29,48 @@ body {
     left: 380px;
 }
 
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    color: #000 !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--Azul) !important;
+}
+
+.btn-primary {
+    background-color: var(--Azul);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--Azul);
+}
+
+.bi-backpack-fill {
+    color: var(--Azul);
+    margin-left: 10px;
+}
+
 .search-wrapper {
-    left: 300px;
     position: relative;
-    width: 200px;
+    left: -388px;
+}
+
+.search-input {
+    padding-left: 2.5rem;
 }
 
 .search-icon {
@@ -36,52 +82,282 @@ body {
     font-size: 18px;
 }
 
-.search-input {
-    padding-left: 2.2rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    height: 38px;
-}
-
-.navbar {
-    background-color: #fff;
-    border-top: 1px solid #fff;
-}
-
-.navbar-nav {
-    gap: 20px;
-}
-
-.top-bar,
-.navbar {
-    background-color: #ffffff; 
-    border: none; 
-    box-shadow: none; 
-}
-
-.navbar {
-    border-top: none !important;
-}
-
 .nav-link {
-    font-weight: 600;
-    color:rgb(46, 46, 46);
+    font-weight: 500;
+    margin: 0 12px;
+    color: #000 !important;
 }
 
-.nav-link:hover {
-    color: var(--Azul);
+.navbar-nav .nav-link:hover {
+    color: #0056b3 !important;
 }
 
 .btn-primary {
     position: relative;
-    left: -380px;
-    background-color: var(--Azul);
+    background-color: #2d72d9;
     border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
+    left: -380px;
 }
 
-.text-primary{
+.bi.bi-backpack2-fill {
     position: relative;
-    left: -380px;
+    left: -385px;
+}
+
+.btn-primary:hover {
+    background-color: #1b4f9c;
+}
+
+.bi-backpack-fill {
+    color: #2d72d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.video-bg iframe {
+    width: 100vw;
+    height: 91%;
+    pointer-events: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 73%;
+    background-image: linear-gradient(to right, #1b4f9c, transparent);
+    z-index: -1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    padding: 20px;
+}
+
+.habilidades {
+    color: gold;
+    font-size: 40px;
+    margin-top: -450px;
+
+}
+
+.content .titulo-graduacao {
+    color: #ffffff;
+    font-size: 40px;
+    margin-top: -500px;
+    margin-left: -450px;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-left: -330px;
+}
+
+.search-box {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    padding: 15px 420px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1em;
+    outline: none;
+    padding-left: 10px;
+}
+
+.search-box i {
+    color: white;
+    margin-left: -400px;
+    font-size: 1.2em;
+}
+
+.search-box ::placeholder {
+    color: white;
+}
+
+.video-bg {
+    height: 80%;
+}
+
+#cursos .btn {
+    position: relative;
+    margin-top: -580px;
+    color: #ffffff;
+    display: inline-block;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#cursos .btn:hover {
+    filter: brightness(90%);
+}
+
+#titulo-cursos h1 {
+    position: absolute;
+    margin-top: -330px;
+    left: 39%;
+    color: gray;
+}
+
+.btn-nivel-ensino-medio-tecnico {
+    background-color: #C761CB;
+    border-color: #C761CB;
+    color: #fff;
+}
+
+.btn-nivel-ensino-medio-tecnico:hover {
+    background-color: #C761CB;
+    border-color: #C761CB;
+    color: #fff;
+}
+
+.btn-espec-tec {
+    background-color: #f5b91b;
+    border-color: #f5b91b;
+    color: #fff;
+}
+
+.btn-espec-tec:hover {
+    background-color: #f5b91b;
+    border-color: #f5b91b;
+    color: #fff;
+}
+
+.btn-tecnico {
+    background-color: #f5b91b;
+    border-color: #f5b91b;
+    color: #fff;
+}
+
+.btn-tecnico:hover {
+    background-color: #f5b91b;
+    border-color: #f5b91b;
+    color: #fff;
+}
+
+.btn-livre {
+    background-color: #ed7e36;
+    border-color: #ed7e36;
+    color: #fff;
+}
+
+.btn-livre:hover {
+    background-color: #ed7e36;
+    border-color: #ed7e36;
+    color: #fff;
+}
+
+.btn-idiomas {
+    background-color: #ed7e36;
+    border-color: #ed7e36;
+    color: #fff;
+}
+
+.btn-idiomas:hover {
+    background-color: #ed7e36;
+    border-color: #ed7e36;
+    color: #fff;
+}
+
+.btn-graduacao {
+    background-color: #3eaae0;
+    border-color: #3eaae0;
+    color: #fff;
+}
+
+.btn-graduacao:hover {
+    background-color: #3eaae0;
+    border-color: #3eaae0;
+    color: #fff;
+}
+
+.btn-pos-graduacao {
+    background-color: #4e4eea;
+    border-color: #4e4eea;
+    color: #fff;
+}
+
+.btn-pos-graduacao:hover {
+    background-color: #4e4eea;
+    border-color: #4e4eea;
+    color: #fff;
+}
+
+.btn-extensao {
+    background-color: #37c0a1;
+    border-color: #37c0a1;
+    color: #fff;
+}
+
+.btn-extensao:hover {
+    background-color: #37c0a1;
+    border-color: #37c0a1;
+    color: #fff;
+}
+
+.btn-jovem-aprendiz {
+    background-color: #46c3d8;
+    border-color: #46c3d8;
+    color: #fff;
+}
+
+.btn-jovem-aprendiz:hover {
+    background-color: #46c3d8;
+    border-color: #46c3d8;
+    color: #fff;
+}
+
+.btn-ead {
+    background-color: #fc65a0;
+    border-color: #fc65a0;
+    color: #fff;
+}
+
+.btn-ead:hover {
+    background-color: #fc65a0;
+    border-color: #fc65a0;
+    color: #fff;
+}
+
+.btn-escola {
+    background-color: #ce5d42;
+    border-color: #ce5d42;
+    color: #fff;
+}
+
+.btn-escola:hover {
+    background-color: #ce5d42;
+    border-color: #ce5d42;
+    color: #fff;
 }
